@@ -2,21 +2,21 @@
 
 /* variables de color */
 :root {
-    --fondo: #1a1a2e;
-    --texto: #e0e0e0;
-    --acento: #00b4d8;
-    --fondoTarjeta: #16213e;
-    --borde: #2a2a4a;
-    --gris: #9ba4b5;
+    --fondo: #000000;
+    --texto: #f5f5f7;
+    --acento: #0a84ff;
+    --fondoTarjeta: rgba(28,28,30,0.8);
+    --borde: rgba(255,255,255,0.08);
+    --gris: #a1a1a6;
 }
 
 body.claro {
-    --fondo: #f5f5f5;
-    --texto: #111111;
-    --acento: #0077b6;
-    --fondoTarjeta: #ffffff;
-    --borde: #cccccc;
-    --gris: #555555;
+    --fondo: #ffffff;
+    --texto: #1d1d1f;
+    --acento: #0071e3;
+    --fondoTarjeta: rgba(255,255,255,0.8);
+    --borde: rgba(0,0,0,0.08);
+    --gris: #6e6e73;
 }
 
 body {
@@ -30,11 +30,12 @@ body {
 /* nav */
 nav {
     background-color: var(--fondoTarjeta);
-    border-bottom: 2px solid var(--acento);
-    padding: 12px 24px;
+    border-bottom: 1px solid var(--borde);
+    padding: 10px 40px;
     display: flex;
-    gap: 20px;
     align-items: center;
+    justify-content: center;
+    gap: 32px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -43,7 +44,7 @@ nav {
 nav a {
     color: var(--gris);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 nav a:hover {
@@ -51,42 +52,50 @@ nav a:hover {
 }
 
 nav button {
-    margin-left: auto;
+    position: absolute;
+    right: 40px;
     cursor: pointer;
-    padding: 6px 14px;
+    padding: 4px 10px;
     background: transparent;
     color: var(--gris);
-    border: 1px solid var(--borde);
-    border-radius: 20px;
+    border: none;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
 }
 
 nav button:hover {
     color: var(--acento);
-    border-color: var(--acento);
 }
 
 /* contenido */
 main {
     max-width: 760px;
     margin: 0 auto;
-    padding: 20px 20px 40px;
+    padding: 40px 20px 60px;
 }
 
 /* header */
 header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     padding: 50px 0 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid var(--borde);
 }
 
 header img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
     border-radius: 50%;
-    margin: 0 auto 16px;
-    display: block;
-    border: 3px solid var(--acento);
+    border: none;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 h1 {
@@ -108,7 +117,7 @@ h1 {
 
 /* secciones */
 section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 h2 {
@@ -143,8 +152,8 @@ a:hover {
 article {
     background-color: var(--fondoTarjeta);
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    padding: 18px;
+    border-radius: 12px;
+    padding: 20px;
     margin-bottom: 16px;
 }
 
@@ -237,6 +246,23 @@ form button {
 
 form button:hover {
     opacity: 0.85;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.redes a {
+    color: var(--gris);
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: var(--texto);
 }
 
 /* pie */
