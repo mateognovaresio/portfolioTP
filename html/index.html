@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mateo Novaresio</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="trayectoria.html">Trayectoria</a>
+        <a href="contacto.html">Contacto</a>
+        <button onclick="cambiarTema()">Cambiar tema</button>
+    </nav>
+
+    <main>
+
+        <header>
+            <img src="img/mateo.JPG" alt="Foto de Mateo" width="150" />
+            <h1>Fabricio Martino</h1>
+            <p class="titulo">Estudiante de Ingeniería en Sistemas de Información</p>
+            <p class="subtitulo">Desarrollo de software · Soporte IT · Electrónica</p>
+        </header>
+
+        <section id="sobreMi">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Fabricio. Estudiante de Ingeniería en Sistemas de Información con base en Electrónica. Me muevo entre el desarrollo de software, el soporte IT y la gestión técnica. Creo que la mejor manera de aprender es construyendo cosas reales.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>⚡ Arduino — sensores, actuadores, comunicación serial</li>
+                <li>⚙️ C++ — programación orientada a objetos</li>
+                <li>🐍 Python — automatización y análisis de datos</li>
+                <li>🌐 HTML5 / CSS3 — diseño web responsive</li>
+                <li>🗄️ SQL — bases de datos relacionales</li>
+                <li>📦 Git — control de versiones</li>
+            </ul>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+
+            <article class="cartaProyecto">
+                <img src="img/proyecto1.png" alt="Proyecto Air" />
+                <div class="infoProyecto">
+                    <h3>Air — Transporte seguro</h3>
+                    <p>Sistema experto en Prolog que analiza variables del conductor para calcular niveles de riesgo y generar recomendaciones automáticas.</p>
+                </div>
+            </article>
+
+            <article class="cartaProyecto">
+                <img src="img/proyecto2.png" alt="E-Com Insights Pro" />
+                <div class="infoProyecto">
+                    <h3>E-Com Insights Pro</h3>
+                    <p>Plataforma de inteligencia de negocios para e-commerce. Centraliza datos para optimizar precios e inventario.</p>
+                </div>
+            </article>
+
+        </section>
+
+        <section id="redes">
+            <h2>Redes sociales</h2>
+            <p><a href="https://github.com" target="_blank">🐙 GitHub</a></p>
+            <p><a href="https://linkedin.com" target="_blank">💼 LinkedIn</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Fabricio Martino — 2026</p>
+        <p>Hecho con HTML, CSS y mate.</p>
+    </footer>
+
+    <script>
+        if (localStorage.getItem("tema") === "claro") {
+            document.body.classList.add("claro");
+        }
+        function cambiarTema() {
+            document.body.classList.toggle("claro");
+            var claro = document.body.classList.contains("claro");
+            localStorage.setItem("tema", claro ? "claro" : "oscuro");
+        }
+    </script>
+
+</body>
+</html>

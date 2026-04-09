@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto — Fabricio Martino</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="trayectoria.html">Trayectoria</a>
+        <a href="contacto.html">Contacto</a>
+        <button onclick="cambiarTema()">Cambiar tema</button>
+    </nav>
+
+    <main>
+
+        <header>
+            <h1>Contacto</h1>
+            <p class="subtitulo">Si querés trabajar juntos o tenés alguna pregunta, escribime.</p>
+        </header>
+
+        <section id="contacto">
+            <h2>Formulario de contacto</h2>
+            <form action="https://formspree.io/f/myknvwpz" method="POST">
+                <label for="nombre">Nombre:</label><br />
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required /><br /><br />
+
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required /><br /><br />
+
+                <label for="mensaje">Mensaje:</label><br />
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contame tu idea..." required></textarea><br /><br />
+
+                <button type="submit">✉ Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section id="redes">
+            <h2>También podés encontrarme en</h2>
+            <p><a href="https://github.com" target="_blank">🐙 GitHub</a></p>
+            <p><a href="https://linkedin.com" target="_blank">💼 LinkedIn</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Fabricio Martino — 2026</p>
+        <p>Hecho con HTML, CSS y mate.</p>
+    </footer>
+
+    <script>
+        if (localStorage.getItem("tema") === "claro") {
+            document.body.classList.add("claro");
+        }
+        function cambiarTema() {
+            document.body.classList.toggle("claro");
+            var claro = document.body.classList.contains("claro");
+            localStorage.setItem("tema", claro ? "claro" : "oscuro");
+        }
+    </script>
+
+</body>
+</html>

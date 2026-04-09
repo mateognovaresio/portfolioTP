@@ -1,0 +1,26 @@
+/* estilos exclusivos de trayectoria */
+
+.timeline {
+    border-left: 2px solid var(--borde);
+    padding-left: 24px;
+    margin-top: 16px;
+}
+
+.timeline-item {
+    margin-bottom: 28px;
+}
+
+.anio {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--acento);
+    border: 1px solid var(--acento);
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.timeline-item article {
+    margin-bottom: 0;
+}

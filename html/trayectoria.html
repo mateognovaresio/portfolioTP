@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trayectoria — Fabricio Martino</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="trayectoria.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="trayectoria.html">Trayectoria</a>
+        <a href="contacto.html">Contacto</a>
+        <button onclick="cambiarTema()">Cambiar tema</button>
+    </nav>
+
+    <main>
+
+        <header>
+            <h1>Mi Trayectoria</h1>
+            <p class="subtitulo">Del primer LED parpadeando hasta acá</p>
+        </header>
+
+        <section id="experiencia">
+            <h2>Experiencia laboral</h2>
+
+            <article>
+                <h3>🖥️ Soporte IT — TechSoluciones S.A.</h3>
+                <p class="fecha">2023 — Actualidad</p>
+                <p>Mantenimiento de equipos, soporte técnico a usuarios y administración de redes locales. Resolución de incidentes de hardware y software en entornos corporativos.</p>
+            </article>
+
+            <article>
+                <h3>🐍 Desarrollador freelance — Automatización</h3>
+                <p class="fecha">2022 — 2023</p>
+                <p>Desarrollo de scripts en Python para automatización de procesos y reportes de datos. Integración con APIs externas y bases de datos SQL.</p>
+            </article>
+        </section>
+
+        <section id="timeline">
+            <h2>Línea de tiempo</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="anio">2019</span>
+                    <article>
+                        <h3>⚙️ Los primeros pasos: C++</h3>
+                        <p class="fecha">Tecnicatura en Electrónica</p>
+                        <p>Aprendí cómo funciona una computadora por dentro: memoria, punteros y estructuras de control.</p>
+                    </article>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="anio">2020</span>
+                    <article>
+                        <h3>⚡ El mundo físico: Arduino</h3>
+                        <p class="fecha">Tecnicatura en Electrónica</p>
+                        <p>Primeros pasos con Arduino. Ver que el código hacía cosas en el mundo real cambió todo.</p>
+                    </article>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="anio">2024</span>
+                    <article>
+                        <h3>🎓 La UTN y bases más sólidas</h3>
+                        <p class="fecha">Universidad Tecnológica Nacional</p>
+                        <p>Estructuras de datos, algoritmos y buenas prácticas de código.</p>
+                    </article>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="anio">Hoy</span>
+                    <article>
+                        <h3>🌐 El salto a la web: HTML y CSS</h3>
+                        <p class="fecha">Cátedra Desarrollo de Software — UTN</p>
+                        <p>Aprendo desarrollo web. Este portfolio es el resultado.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Fabricio Martino — 2026</p>
+        <p>Hecho con HTML, CSS y mate.</p>
+    </footer>
+
+    <script>
+        if (localStorage.getItem("tema") === "claro") {
+            document.body.classList.add("claro");
+        }
+        function cambiarTema() {
+            document.body.classList.toggle("claro");
+            var claro = document.body.classList.contains("claro");
+            localStorage.setItem("tema", claro ? "claro" : "oscuro");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* variables de color */
+:root {
+    --fondo: #1a1a2e;
+    --texto: #e0e0e0;
+    --acento: #00b4d8;
+    --fondoTarjeta: #16213e;
+    --borde: #2a2a4a;
+    --gris: #9ba4b5;
+}
+
+body.claro {
+    --fondo: #f5f5f5;
+    --texto: #111111;
+    --acento: #0077b6;
+    --fondoTarjeta: #ffffff;
+    --borde: #cccccc;
+    --gris: #555555;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+nav {
+    background-color: var(--fondoTarjeta);
+    border-bottom: 2px solid var(--acento);
+    padding: 12px 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: var(--gris);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--acento);
+}
+
+nav button {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 6px 14px;
+    background: transparent;
+    color: var(--gris);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav button:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+}
+
+/* contenido */
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+}
+
+/* header */
+header {
+    text-align: center;
+    padding: 50px 0 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--borde);
+}
+
+header img {
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: block;
+    border: 3px solid var(--acento);
+}
+
+h1 {
+    color: var(--acento);
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo {
+    color: var(--texto);
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.subtitulo {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+/* secciones */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--acento);
+    font-size: 18px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--borde);
+}
+
+p {
+    line-height: 1.7;
+    color: var(--gris);
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 2.2;
+    color: var(--gris);
+}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* articulos genericos */
+article {
+    background-color: var(--fondoTarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+article:hover {
+    border-color: var(--acento);
+}
+
+article h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: var(--texto);
+}
+
+/* cartas de proyecto con imagen */
+.cartaProyecto {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartaProyecto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.infoProyecto {
+    padding: 16px;
+}
+
+.infoProyecto h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: var(--texto);
+}
+
+.infoProyecto p {
+    font-size: 13px;
+}
+
+/* fecha */
+.fecha {
+    font-size: 12px;
+    color: var(--acento);
+    margin-bottom: 8px;
+}
+
+/* formulario */
+form {
+    max-width: 500px;
+}
+
+form label {
+    font-size: 13px;
+    color: var(--gris);
+    text-transform: uppercase;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    background-color: var(--fondoTarjeta);
+    color: var(--texto);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--acento);
+}
+
+form button {
+    padding: 10px 24px;
+    background-color: var(--acento);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+form button:hover {
+    opacity: 0.85;
+}
+
+/* pie */
+footer {
+    background-color: var(--fondoTarjeta);
+    border-top: 1px solid var(--borde);
+    text-align: center;
+    padding: 24px 20px;
+    color: var(--gris);
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    nav button {
+        margin-left: 0;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
